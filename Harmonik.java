@@ -1,23 +1,15 @@
-package donguler;
-
-import java.util.Scanner;
 
 public class Harmonik {
 
 	public static void main(String[] args) {
-		int n;
+		int[] list = {1,2,3,4,5,6,7,8,9,10};
+		double sum = 0;
 		
-		Scanner input = new Scanner(System.in);
-		System.out.println("Please enter a number.");	
-		n = input.nextInt();
-		
-		double total = 0;
-		
-		for (int i = 1; i<=n; i++) {
-			total += (1.0/i);
+		for (int i = 0; i<list.length; i++) {
+			sum = (sum + (1/list[i]));
 		}
-		System.out.println(total);
+		double harmonic = list.length/sum; 
+		System.out.println(harmonic);
 
 	}
-
 }
